@@ -4,7 +4,9 @@ class EndpointManager:
         self.endpoints = self.get_endpoints()
 
     def get_endpoints(self):
-        endpoints = {}
+        endpoints = {
+            "quickbook": self.base_url + "/getData?cmd=quickbook&type={0}"
+        }
         return endpoints
 
     def get_endpoint(self, name):
